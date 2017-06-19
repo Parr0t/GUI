@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Abel';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/static/fonts/Abel-regular/Abel-regular.eot');
+    src: url('/static/fonts/Abel-regular/Abel-regular.eot?#iefix') format('embedded-opentype'),
+       local('Abel'),
+       local('Abel-regular'),
+        url('/static/fonts/Abel-regular/Abel-regular.woff2') format('woff2'),
+        url('/static/fonts/Abel-regular/Abel-regular.woff') format('woff'),
+        url('/static/fonts/Abel-regular/Abel-regular.ttf') format('truetype'),
+        url('/static/fonts/Abel-regular/Abel-regular.svg#Abel') format('svg');
+}
+
+@font-face {
+    font-family: 'Exo';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/static/fonts/Exo-regular/Exo-regular.eot');
+    src: url('/static/fonts/Exo-regular/Exo-regular.eot?#iefix') format('embedded-opentype'),
+        local('Exo Regular'),
+        local('Exo-regular'),
+        url('/static/fonts/Exo-regular/Exo-regular.woff2') format('woff2'),
+        url('/static/fonts/Exo-regular/Exo-regular.woff') format('woff'),
+        url('/static/fonts/Exo-regular/Exo-regular.ttf') format('truetype'),
+        url('/static/fonts/Exo-regular/Exo-regular.svg#Exo') format('svg');
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/static/fonts/Exo-2-regular/Exo-2-regular.eot');
+    src: url('/static/fonts/Exo-2-regular/Exo-2-regular.eot?#iefix') format('embedded-opentype'),
+        local('Exo 2'),
+        local('Exo-2-regular'),
+        url('/static/fonts/Exo-2-regular/Exo-2-regular.woff2') format('woff2'),
+        url('/static/fonts/Exo-2-regular/Exo-2-regular.woff') format('woff'),
+        url('/static/fonts/Exo-2-regular/Exo-2-regular.ttf') format('truetype'),
+        url('/static/fonts/Exo-2-regular/Exo-2-regular.svg#Exo2') format('svg');
+}
+
+
+@font-face {
+    font-family: 'Jura';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/static/fonts/Jura-regular/Jura-regular.eot');
+    src: url('/static/fonts/Jura-regular/Jura-regular.eot?#iefix') format('embedded-opentype'),
+        local('Jura Regular'),
+        local('Jura-regular'),
+        url('/static/fonts/Jura-regular/Jura-regular.woff2') format('woff2'),
+        url('/static/fonts/Jura-regular/Jura-regular.woff') format('woff'),
+        url('/static/fonts/Jura-regular/Jura-regular.ttf') format('truetype'),
+        url('/static/fonts/Jura-regular/Jura-regular.svg#Jura') format('svg');
+}
+

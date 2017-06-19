@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./static/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
+
+    <link rel="stylesheet" href="./static/css/custom.css">
+    <link rel="stylesheet" href="./static/fonts.css">
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+-->
+
+
+    <style>
+        .line {
+            stroke: darkcyan;
+            fill: none;
+        }
+        
+        .area {
+            fill-opacity: .3;
+            stroke: none;
+            fill: rgba(32, 178, 170, .9);
+        }
+        
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: auto;
+            height: auto;
+            padding: 5px 5px;
+            font: 12px sans-serif;
+            font-weight: bold;
+            background: rgba(30, 30, 30, .9);
+            color: white;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+            box-shadow: 2px 2px 5px rgba(30, 30, 30, .4);
+        }
+        
+        .tooltipElementsXY {
+            color: silver;
+        }
+      /*  .axis path, .axis line {
+            fill: none;
+            stroke: #555555;
+            shape-rendering: crispEdges;
+        }*/
+    </style>
+
+</head>
+
+<body class="application">
+
+    
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-3">
+                <div class="row">
+                    <ul id="datastreams">
+                        <li class="datastreamsHeader">Datastreams</li>
+                        <a href="#" id="soundsensLink">
+                            <li>Soundsensor</li>
+                        </a>
+                        <a href="#" id="tendofLink">
+                            <li>TenDoF</li>
+                        </a>
+                        <a href="#" id="ustrLink">
+                            <li>Ultrasonic_top_right</li>
+                        </a>
+                        <a href="#" id="settingsLink">
+                            <li>settings</li>
+                        </a>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="col-sm-9">
+                <div class="row">
+
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Soundsensor
+                        </div>
+                        <script src="https://d3js.org/d3.v4.min.js"></script>
+                        <script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+                        <div class="chart-stage">
+                            <div id="soundsensor"></div>
+                        </div>
+                        
+                    </div>
+ <!--   <script>        
+    var t = -1
+    var n = 40,
+        duration = 750
+    data = d3.range(n).map(next);
+
+    function next(){
+        return {time: ++t, value: Math.random()*10}
+    }
+
+        var margin = {
+            top: 20,
+            right: 20,
+            bottom: 30,
+            left: 50
+        },
+            width = 660 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+
+    var x = d3.scale.linear()
+    .domain([t-n+1, t])
+    .range([0, width]);
+
+    var y = d3.time.scale()
+    .range([height, 0])
+    .domain([0, 10]);;
+
+    var line = d3.svg.line()
+    .interpolate("basis")
+    .x(function (d, i) {return x(d.time);})
+    .y(function (d, i) {return y(d.value);});
+
+    var svg = d3.select("#soundsensor").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .style("margin-left", -margin.left + "px")
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.append("defs").append("clipPath")
+        .attr("id", "clip")
+        .append("rect")
+        .attr("width", width)
+        .attr("height", height);
+
+    var xAxis = d3.svg.axis().scale(x).orient("bottom");
+    var axis = svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(x.axis=xAxis);
+
+    var path = svg.append("g")
+    .attr("clip-path", "url(#clip)")
+    .append("path")
+    .data([data])
+    .attr("class", "line");
+
+    tick();
+
+    function tick() {
+
+        // update the domains
+        x.domain([t - n + 2 , t]);
+
+        // push the accumulated count onto the back, and reset the count
+        data.push(next());
+
+        // redraw the line
+        svg.select(".line")
+            .attr("d", line)
+            .attr("transform", null);
+
+        // slide the x-axis left
+        axis.transition()
+            .duration(duration)
+            .ease("linear")
+            .call(x.axis);
+
+        // slide the line left
+        path.transition()
+            .duration(duration)
+            .ease("linear")
+            .attr("transform", "translate(" + x(t-n) + ")")
+            .each("end", tick);
+
+        // pop the old data point off the front
+        data.shift();
+
+    }
+
+                    </script>-->
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./static/lib/js/jquery.min.js"></script>
+    <script src="./static/lib/js/bootstrap.min.js"></script>
+    <script src="./static/lib/js/keen.min.js"></script>
+    
+    <script src="./static/js/graphs.js"></script>
+
+
+
+
+</body>
+
+</html>
