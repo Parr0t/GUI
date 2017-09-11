@@ -91,18 +91,37 @@ def data_listener():
         messageZM.append(int(daten[14].strip().split(' ')[2]))
 
 
-        if (len(messageTime)>700):
+        if (len(messageTime)>400):
             messageTime.pop(0)
             messageLight.pop(0)
             messageTemp.pop(0)
             messagePressure.pop(0)
             messageHumidity.pop(0)
-        if(len(plotTime)>700):
+            messageXA.pop(0)
+            messageYA.pop(0)
+            messageZA.pop(0)
+            messageXG.pop(0)
+            messageYG.pop(0)
+            messageZG.pop(0)
+            messageXM.pop(0)
+            messageYM.pop(0)
+            messageZM.pop(0)
+        if(len(plotTime)>400):
             plotTime.pop(0)
             plotLight.pop(0)
             plotTemp.pop(0)
             plotPressure.pop(0)
             plotHumidity.pop(0)
+            plotXA.pop(0)
+            plotYA.pop(0)
+            plotZA.pop(0)
+            plotXG.pop(0)
+            plotYG.pop(0)
+            plotZG.pop(0)
+            plotXM.pop(0)
+            plotYM.pop(0)
+            plotZM.pop(0)
+            
 
 
 
@@ -111,7 +130,7 @@ if __name__ == '__main__':
     thread.daemon = True
     thread.start()
 
-    #
+
     # initialize figure
     labelPlot =False
     plt.rcParams['toolbar']='None'
